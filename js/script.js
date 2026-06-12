@@ -11,6 +11,12 @@ function tocarSomPop() {
     somPop.play();
 }
 
+function tocarSomFinal() {
+    const somPop = new Audio('assets/final.mp3');
+    somPop.volume = 0.3;
+    somPop.play();
+}
+
 pot.addEventListener('click', () => {
 if (contadorCliques >= CLIQUES_NECESSARIOS) return;
 
@@ -19,6 +25,7 @@ tocarSomPop();
 estourarPipoca();
 
 if (contadorCliques === CLIQUES_NECESSARIOS) {
+    tocarSomFinal();
     setTimeout(mostrarCenaFinal, 1000);
 }
 });
