@@ -6,7 +6,7 @@ const container = document.getElementById('game-container');
 const finalScene = document.getElementById('final-scene');
 
 function tocarSomPop() {
-    const somPop = new Audio('pop.mp3');
+    const somPop = new Audio('assets/pop.mp3');
     somPop.volume = 0.5;
     somPop.play();
 }
@@ -27,7 +27,7 @@ function estourarPipoca() {
 const pipoca = document.createElement('div');
 pipoca.classList.add('popcorn');
 
-pipoca.innerHTML = '<img src="pipoca.png" width="40" height="40">'; 
+pipoca.innerHTML = '<img src="assets/pipoca.png" width="40" height="40">'; 
 
 const randomDX = (Math.random() - 0.5) * 600;
 const randomDY = (Math.random() * -300) - 100;
