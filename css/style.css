@@ -51,9 +51,9 @@ body {
         transform: translate(calc(-50% + var(--dx) / 2), -300px) scale(1.2) rotate(180deg);
     }
     100% {
-        transform: translate(calc(-50% + var(--dx)), var(--dy)) scale(1) rotate(360deg);
-        opacity: 0.9;
-    }
+    transform: translate(calc(-50% + var(--dx)), var(--dy)) scale(1) rotate(var(--spin));
+    opacity: 0.9;
+}
 }
 
 #final-scene {

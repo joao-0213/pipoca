@@ -31,18 +31,26 @@ if (contadorCliques === CLIQUES_NECESSARIOS) {
 });
 
 function estourarPipoca() {
-const pipoca = document.createElement('div');
-pipoca.classList.add('popcorn');
+    const pipoca = document.createElement('div');
+    pipoca.classList.add('popcorn');
 
-pipoca.innerHTML = '<img src="assets/pipoca.png" width="40" height="40">'; 
+    pipoca.innerHTML = '<img src="assets/pipoca.png" width="40" height="40">'; 
 
-const randomDX = (Math.random() - 0.5) * 600;
-const randomDY = (Math.random() * -300) - 100;
+    const randomDX = (Math.random() - 0.5) * 600;
+    const randomDY = (Math.random() * -300) - 100;
+    
+    let randomSpin = 0;
+    if (Math.random() < 0.5) {
+        randomSpin = (Math.random() * 360) + 360;
+    } else {
+        randomSpin = (Math.random() * -360) - 360;
+    }
 
-pipoca.style.setProperty('--dx', `${randomDX}px`);
-pipoca.style.setProperty('--dy', `${randomDY}px`);
+    pipoca.style.setProperty('--dx', `${randomDX}px`);
+    pipoca.style.setProperty('--dy', `${randomDY}px`);
+    pipoca.style.setProperty('--spin', `${randomSpin}deg`); // Injeta a variável de giro
 
-container.appendChild(pipoca);
+    container.appendChild(pipoca);
 }
 
 function mostrarCenaFinal() {
